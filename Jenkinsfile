@@ -1,3 +1,5 @@
+
+
 pipeline {
     agent any
 
@@ -28,12 +30,11 @@ pipeline {
                 }
             }
             steps {
-            sh '''
-            test -f build/index.html'
-            npm test
-            '''
+                sh '''
+                    test -f build/index.html
+                    npm test
+                '''
             }
-    }
-
+        }
     }
 }
